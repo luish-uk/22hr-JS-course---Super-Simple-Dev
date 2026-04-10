@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09-Exercies</title>
+</head>
+<body>
+    <h1>9(a-b)</h1>
+    <button onclick="chosen('Heads');">Heads</button>
+    <button onclick="chosen('Tails');">Tails</button>
+    <p class="choice"></p>
+
+    <h1>9(d-f)</h1>
+    <input placeholder="Name"><button onclick="submitname();">Submit</button>
+    <p class="name"></p>
+    <script>
+        function chosen(choice){
+            document.querySelector('.choice')
+                .innerHTML = `You chose: ${choice}`;
+        }
+        
+        function submitname(){
+            const NameObj = document.querySelector('input');
+            let Name = NameObj.value;
+            console.log(NameObj);
+            document.querySelector('.name')
+                .innerHTML = `Your name is: ${Name}`;
+        }
+    </script>
+</body>
+</html>
